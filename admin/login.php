@@ -10,13 +10,12 @@ if (isset($_POST['login'])) {
   $password = $_POST['password'];
 
   // ambil data di database
-  $query = $koneksi->query("SELECT * FROM akses WHERE email='$email' AND `password`='$password'");
+  $query = $koneksi->query("SELECT * FROM akses WHERE email='$email' AND `password`='$password'") or die(mysqli_error($koneksi));
   $hasil = $query->fetch_assoc();
-  $hasilid_user = $hasil['id_akses'];
 
   // coba login
 
-  if ($hasilid_user != NULL) {
+  if ($hasil['id_akses'] != NULL) {
     $_SESSION["login"] = true;
     header("location:index.php");
   } else {
@@ -77,7 +76,7 @@ if (isset($_SESSION["login"])) {
                       <div class="form-group">
                         <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" required>
                       </div>
-                      <button class="btn btn-primary btn-user btn-block" name="login">
+                      <button type="submit" class="btn btn-primary btn-user btn-block" name="login">
                         Login
                       </button>
                       <hr>

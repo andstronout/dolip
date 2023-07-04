@@ -64,13 +64,13 @@ if (!isset($_SESSION["login"])) {
               </thead>
               <tbody>
                 <?php
-                $sql = $koneksi->query("SELECT * FROM pembelian INNER JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan");
+                $sql = $koneksi->query("SELECT * FROM pembelian INNER JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan ORDER BY id_pembelian DESC");
                 $no = 1;
                 while ($data = $sql->fetch_assoc()) {
                 ?>
                   <tr>
                     <td><?= $no++; ?></td>
-                    <td><?= $data['id_pembelian']; ?></td>
+                    <td>MERCH-<?= $data['tanggal_pembelian'] . '-' . $data['id_pembelian']; ?></td>
                     <td><?= $data['nama_pelanggan']; ?></td>
                     <td><?= $data['nomorHp']; ?></td>
                     <td><?= $data['tanggal_pembelian']; ?></td>

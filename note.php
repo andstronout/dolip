@@ -1,34 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 <?php
-session_start();
-require '../koneksi.php';
-$conn = koneksi();
-
+$id = 1;
 if (isset($_POST['simpan'])) {
-
-  // ambil data login
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-
-  echo '<pre>';
-  print_r($email, $password);
-  echo '</pre>';
+  echo 'ok';
+  var_dump($_GET['id']);
 }
+?>
 
+<body>
+  <form action="note.php?id=<?= $id; ?>" method="post">
+    <label>
+      username
+      <input type="text" name="username">
+    </label>
+    <input type="submit" value="simpan" name="simpan">
+  </form>
+</body>
 
-
-
-// ambil data di db
-$query = $conn->query("SELECT * FROM akses WHERE email='$email' AND `password`='$password'") or die(mysqli_error($conn));
-$result = $query->fetch_assoc();
-$id = $result['id_akses'];
-
-
-if ($id != NULL) {
-header("location:index.php");
-} else {
-echo "
-<script>
-  alert('No');
-</script>;
-";
-}
+</html>

@@ -71,7 +71,7 @@ if (!isset($_SESSION["login"])) {
                   <tr>
                     <td><?= $no++; ?></td>
                     <td><?= $data['namaProduk']; ?></td>
-                    <td><?= $data['harga']; ?></td>
+                    <td>Rp. <?= number_format($data['harga']); ?></td>
                     <td><?= $data['deskripsi']; ?></td>
                     <td><img src="../image/produk/<?= $data['gambar']; ?>" width="150px"></td>
                     <td>
