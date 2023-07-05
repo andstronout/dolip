@@ -112,7 +112,7 @@ $koneksi = koneksi();
           <h2>Welcome to <span>D-OLIP</span></h2>
           <p>Departemen Olahraga Insan Pembangunan </p>
           <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started">Lihat Detail</a>
+            <a href="pendaftaran_anggota.php" class="btn-get-started">Daftar Menjadi Anggota</a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2">
@@ -228,7 +228,7 @@ $koneksi = koneksi();
 
         <div class="section-header">
           <h2>Cabang Olahraga</h2>
-          <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
+          <p>Cabang olahraga yang ada di D-OLIP Universitas Insan Pembangunan Indonesia</p>
         </div>
 
         <div class="row gy-4 d-flex justify-content-center">
