@@ -88,7 +88,9 @@ $koneksi = koneksi();
                 <li>
                   <a href="penjualan/keranjang.php">Keranjang Belanja</a>
                 </li>
-                <li><a href="user/ubah.php">Ubah Profile</a></li>
+                <?php if (isset($_SESSION['login_pelanggan'])) { ?>
+                  <li><a href="user/ubah.php">Ubah Profile</a></li>
+                <?php } ?>
                 <li><a href="user/logout.php">Logout</a></li>
               </div>
             </ul>
