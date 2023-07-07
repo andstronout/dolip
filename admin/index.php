@@ -18,7 +18,7 @@ if (!isset($_SESSION["login"])) {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Dashboard</title>
+  <title>Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="../sbadmin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -36,20 +36,20 @@ if (!isset($_SESSION["login"])) {
     <?php include('../layout/sidebar.php'); ?>
 
     <!-- Begin Page Content -->
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-color: #C5DFF8;">
 
-      <!-- Page Heading -->
-      <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-      </div>
-
-      <!-- 404 Error Text -->
-      <div class="text-center">
-        <div class="error mx-auto" data-text="404">404</div>
-        <p class="lead text-gray-800 mb-5">Page Not Found</p>
-        <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
-        <a href="index.html">&larr; Back to Dashboard</a>
+      <div class="container px-5 pb-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-xxl-5">
+            <!-- Header text content-->
+            <div class="text-center text-xxl-start" style="margin-left: 50px;">
+              <div>
+                <img class="profile-img" src="../image/D_Olip.png" alt="..." width="200px" />
+              </div>
+              <h1 class=" mb-5"><span class="text-gradient d-inline">Think Positive, Think Sport, and Grow Together</span></h1>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -59,7 +59,7 @@ if (!isset($_SESSION["login"])) {
   <!-- End of Main Content -->
 
   <!-- Footer -->
-  <footer class="sticky-footer bg-white">
+  <footer class="sticky-footer">
     <div class="container my-auto">
       <div class="copyright text-center my-auto">
         <span>Copyright &copy; D-Olip Insan Pembangunan 2023</span>
